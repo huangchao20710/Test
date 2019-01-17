@@ -3,7 +3,7 @@
         <div class="special_container">
             <div @click="toCar">
                 <span></span>
-                <span>接送机111</span>
+                <span>接送机</span>
                 <i></i>
             </div>
             <div @click="toVIPlounge">
