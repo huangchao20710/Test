@@ -1,0 +1,148 @@
+$blue: #3190e8;  
+$bc: #e4e4e4;
+$fc:#fff;
+$wc:#fe3c71;
+$f1c:#f1f1f1;
+$c66:#666;
+$c00:#000;
+$c33:#333;
+
+
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+//定位全屏
+@mixin allcover{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+//定位上下左右居中
+@mixin center {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//定位上下左右居中勾选
+@mixin centerdeg {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+
+//定位上下居中
+@mixin ct {  
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+//定位上下居中 箭头倾斜45度
+@mixin ctr($deg) {  
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%) rotate($deg);
+}
+
+//定位左右居中
+@mixin cl {  
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+}
+
+//宽高
+@mixin wh($width, $height){
+	width: $width;
+	height: $height;
+}
+//宽
+@mixin w($width){
+	width: $width;
+}
+//高
+@mixin h($height){
+	height: $height;
+}
+
+
+//字体大小，颜色
+@mixin sc($size, $color){
+	font-size: $size;
+	color: $color;
+}
+
+//固定定位展开高度
+@mixin heightByAbsolute($top,$bottom){
+	width: 100%;
+	position: absolute;
+	top: $top;
+	left: 0;
+	bottom: $bottom;
+	-webkit-overflow-scrolling: touch;
+}
+//1px图片线
+@mixin orderline(){
+	display: block;
+    background: url('//m.lvmama.com/flight/image/orderline.png') 0 bottom repeat-x #fff;
+    background-size: auto .2rem;
+    margin: 0!important;
+    width: 100%;
+    height: 1px!important;
+    padding: 0!important;
+    border-bottom: none!important;
+} 
+
+//白背景遮罩下1px图片线
+@mixin orderlineFFF(){
+	display: block;
+    background: url('//m.lvmama.com/flight/image/orderline.png') 0 bottom repeat-x #f1f1f1;
+    background-size: auto .2rem;
+    margin: 0!important;
+    width: 100%;
+    height: 1px!important;
+    padding: 0!important;
+    border-bottom: none!important;
+}
+
+//上边框线
+@mixin topline{
+    border-style: solid;
+	border-image: url(data:image/gif;base64,R0lGODlhBQAFAPABANra2v///yH5BAUHAAEALAAAAAAFAAUAAAIHhB9pGatnCgA7) 2 stretch;
+    border-width: 0;
+    border-top-width: 1px;
+}
+//左边框线
+@mixin leftline{
+    border-style: solid;
+	border-image: url(data:image/gif;base64,R0lGODlhBQAFAPABANra2v///yH5BAUHAAEALAAAAAAFAAUAAAIHhB9pGatnCgA7) 2 stretch;
+    border-width: 0;
+    border-left-width: 1px;
+}
+//右边框线
+@mixin rightline{
+    border-style: solid;
+	border-image: url(data:image/gif;base64,R0lGODlhBQAFAPABANra2v///yH5BAUHAAEALAAAAAAFAAUAAAIHhB9pGatnCgA7) 2 stretch;
+    border-width: 0;
+    border-right-width: 1px;
+}
+//下边框线
+@mixin bottomline{
+    border-style: solid;
+	border-image: url(data:image/gif;base64,R0lGODlhBQAFAPABANra2v///yH5BAUHAAEALAAAAAAFAAUAAAIHhB9pGatnCgA7) 2 stretch;
+    border-width: 0;
+    border-bottom-width: 1px;
+}
+//边框线
+@mixin line{
+    border-style: solid;
+	border-image: url(data:image/gif;base64,R0lGODlhBQAFAPABANra2v///yH5BAUHAAEALAAAAAAFAAUAAAIHhB9pGatnCgA7) 2 stretch;
+    border-width: 1px;
+}
